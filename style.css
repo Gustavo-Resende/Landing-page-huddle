@@ -24,10 +24,11 @@ header{
     height: auto;
     width: 100%;
     padding-left: 110px;
+    display: flex;
 }
 
 header img{
-    height: 80%;
+    height: 100%;
 }
 
 main{
@@ -63,12 +64,18 @@ main img{
     line-height: 27px;
 }
 
+.box-button{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
 button{
+    border: none;
     width: 220px;
     height: 65px;
     border-radius: 50px;
     margin-left: 15px;
-    border: none;
     margin-top: 15px;
     background-color: hsl(300, 69%, 71%);
     color: white;
@@ -98,6 +105,81 @@ footer img{
 
 footer img:hover{
     transform: scale(1.1);
-    
     transition: all 0.2s;
+}
+
+@media (max-width: 1360px) {
+    body{
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header{
+        justify-content: center;
+        height: 10%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 20px   ;
+    }
+
+    .box-img-illustration{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 40%;
+    }
+
+    .img-illustration{
+        height: 100%;
+    }
+
+    .box-content-right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 0;
+        height: 60%;
+        text-align: center;
+    }
+
+    .box-button{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        margin-top: 25px;
+        height: 50%;
+    }
+
+    footer{
+        justify-content: center;
+        transform: scale(1.1);
+        transition: all 0.2s;
+    } 
+
+}
+
+@media (max-width: 690px) {
+    .box-img-illustration{
+        display: none;
+    }
+
+    main{
+        justify-content: center;
+    }
+
+    footer img{
+        height: 23px;
+    }
 }
